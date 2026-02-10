@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pavadai Measurement Form</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+<header class="top-header"><h1>Pavadai Measurement Form</h1></header>
+
+<form class="measure-form" onsubmit="event.preventDefault();submitForm('Pavadai');">
+
+<label>Customer Name</label>
+<input id="name" required>
+
+<label>Phone Number</label>
+<input id="phone" required>
+
+<label>Shoulder (inches)</label>
+<input id="shoulder" type="number" required>
+
+<label>Chest (inches)</label>
+<input id="chest" type="number" required>
+
+<label>Waist (inches)</label>
+<input id="waist" type="number" required>
+
+<button type="submit">Submit & WhatsApp Order</button>
+<button type="button" onclick="downloadPDF()">Download PDF</button>
+
+</form>
+</body>
+</html>
