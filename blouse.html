@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head><title>Blouse Measurement Form</title>
-<link rel="stylesheet" href="style.css"></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blouse Measurement Form</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
 <body>
-<header class="top-header"><h1>Blouse Measurement Form</h1></header>
-<form class="measure-form">
-<label>Shoulder</label><input type="number">
-<label>Chest</label><input type="number">
-<label>Waist</label><input type="number">
-<button>Submit</button>
-</form>
-</body></html>
+
+  <header class="top-header">
+    <h1>Blouse Measurement Form</h1>
+  </header>
+
+  <form class="measure-form"
+    onsubmit="event.preventDefault(); submitForm('Blouse');">
+
+    <label>Customer Name</label>
+    <input id="name" required />
+
+    <label>Phone Number</label>
+    <input id="phone" required />
+
+    <label>Shoulder (inches)</label>
+    <input id="shoulder" type="number" required />
+
+    <label>Chest (inches)</label>
+    <input id="chest" type="number" required />
+
+    <label>Waist (inches)</label>
+    <input id="waist" type="number" required />
+
+    <!-- ✅ WhatsApp Button -->
+    <button type="submit">
+      Submit & WhatsApp Order
+    </button>
+
+  </form>
+
+</body>
+</html>
