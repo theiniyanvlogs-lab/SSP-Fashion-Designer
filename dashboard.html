@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Tailor Dashboard</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Tailor Dashboard</title>
+
+  <!-- ✅ Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Script -->
+  <script src="script.js"></script>
 </head>
+
 <body onload="loadDashboard()">
-<header class="top-header">
-<h1>Tailor Dashboard (Offline Orders)</h1>
-<p>Status Tracking: Processing → Finished → Delivered</p>
-</header>
-<div id="orders" class="orders"></div>
+
+  <!-- ✅ Dashboard Header -->
+  <header class="top-header">
+    <h1>Tailor Dashboard (Offline Orders)</h1>
+    <p>Status Tracking: Processing → Finished → Delivered</p>
+
+    <!-- ✅ CLEAR ALL ORDERS BUTTON -->
+    <button class="clear-btn" onclick="clearAllOrders()">
+      Clear All Orders
+    </button>
+  </header>
+
+  <!-- ✅ Orders Display Section -->
+  <div id="orders" class="orders"></div>
+
 </body>
 </html>
