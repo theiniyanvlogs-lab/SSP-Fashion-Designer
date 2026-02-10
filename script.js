@@ -1,13 +1,10 @@
 function submitForm(type) {
-
-  // Get Values
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
   const shoulder = document.getElementById("shoulder").value;
   const chest = document.getElementById("chest").value;
   const waist = document.getElementById("waist").value;
 
-  // Save Offline (LocalStorage)
   const data = {
     type,
     name,
@@ -15,12 +12,12 @@ function submitForm(type) {
     shoulder,
     chest,
     waist,
+    status: "Processing",
     date: new Date().toLocaleString()
   };
 
   localStorage.setItem(type + "Order", JSON.stringify(data));
 
-  // WhatsApp Message Format
   let msg =
     `Hello SSP Fashion Designer 👗\n\n` +
     `Order Type: ${type}\n` +
@@ -32,23 +29,30 @@ function submitForm(type) {
     `Waist: ${waist} inches\n\n` +
     `Thank you 🙏`;
 
-  // WhatsApp URL
-  let url =
-    "https://wa.me/917200893968?text=" +
-    encodeURIComponent(msg);
-
-  // ✅ Mobile Friendly Redirect
+  let url = "https://wa.me/917200893968?text=" + encodeURIComponent(msg);
   window.location.href = url;
 }
 
-/* ✅ Dashboard Load Orders */
-function loadDashboard() {
+function downloadPDF() {
+  alert("PDF Download feature: Next update will generate real PDF using jsPDF.");
+}
 
+function setStatus(type, status) {
+  let order = localStorage.getItem(type + "Order");
+  if (!order) return;
+
+  let data = JSON.parse(order);
+  data.status = status;
+
+  localStorage.setItem(type + "Order", JSON.stringify(data));
+  loadDashboard();
+}
+
+function loadDashboard() {
   let container = document.getElementById("orders");
   container.innerHTML = "";
 
-  ["Churidar", "Blouse", "Kurti"].forEach((type) => {
-
+  ["Churidar","Blouse","Kurti","Saree Blouse","Anarkali","Pavadai"].forEach((type) => {
     let order = localStorage.getItem(type + "Order");
 
     if (order) {
@@ -63,6 +67,23 @@ function loadDashboard() {
           <p><b>Chest:</b> ${o.chest}</p>
           <p><b>Waist:</b> ${o.waist}</p>
           <small>Saved: ${o.date}</small>
+
+          <div class="status-buttons">
+            <button class="${o.status === "Processing" ? "active" : ""}"
+              onclick="setStatus('${o.type}', 'Processing')">
+              Order Processing
+            </button>
+
+            <button class="${o.status === "Finished" ? "active" : ""}"
+              onclick="setStatus('${o.type}', 'Finished')">
+              Finished
+            </button>
+
+            <button class="${o.status === "Delivered" ? "active" : ""}"
+              onclick="setStatus('${o.type}', 'Delivered')">
+              Delivered
+            </button>
+          </div>
         </div>
       `;
     }
