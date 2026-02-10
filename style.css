@@ -1,7 +1,7 @@
-/* ================================
-   SSP Fashion Designer - 2026 Final CSS
-   Mugappair & Ayapakkam Boutique
-================================ */
+/* ============================================
+   SSP Fashion Designer - 2026 Final Full CSS
+   Mugappair & Ayapakkam Boutique Tailoring App
+============================================ */
 
 /* ✅ Global Page Style */
 body {
@@ -11,7 +11,9 @@ body {
   color: #222;
 }
 
-/* ✅ Header */
+/* ============================================
+   ✅ Header Section
+============================================ */
 .top-header {
   background: #4b1d3f;
   color: white;
@@ -31,7 +33,9 @@ body {
   opacity: 0.9;
 }
 
-/* ✅ Navigation Bar */
+/* ============================================
+   ✅ Navigation Bar
+============================================ */
 nav {
   text-align: center;
   background: #eee;
@@ -50,7 +54,9 @@ nav a:hover {
   color: #d98bc4;
 }
 
-/* ✅ Banner Section */
+/* ============================================
+   ✅ Banner Section
+============================================ */
 .banner {
   height: 220px;
   background: linear-gradient(#d98bc4, #4b1d3f);
@@ -66,7 +72,9 @@ nav a:hover {
   padding: 20px;
 }
 
-/* ✅ WhatsApp + Call Buttons */
+/* ============================================
+   ✅ WhatsApp + Call Buttons
+============================================ */
 .contact-buttons {
   text-align: center;
   margin: 30px;
@@ -99,17 +107,16 @@ nav a:hover {
   background: blue;
 }
 
-/* ================================
-   ✅ Measurement Form Design
-================================ */
-
+/* ============================================
+   ✅ Measurement Form Design (2026)
+============================================ */
 .measure-form {
-  max-width: 450px;
+  max-width: 480px;
   margin: 35px auto;
   background: white;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
 }
 
 .measure-form label {
@@ -121,10 +128,11 @@ nav a:hover {
 
 .measure-form input {
   width: 100%;
-  padding: 10px;
+  padding: 11px;
   margin-top: 6px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
 .measure-form input:focus {
@@ -134,56 +142,97 @@ nav a:hover {
 
 /* Submit Button */
 .measure-form button {
-  margin-top: 18px;
+  margin-top: 16px;
   width: 100%;
-  padding: 12px;
+  padding: 13px;
   background: #4b1d3f;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .measure-form button:hover {
   background: #d98bc4;
 }
 
-/* ================================
-   ✅ Dashboard Orders Cards
-================================ */
+/* PDF Download Button Style */
+.measure-form button[type="button"] {
+  background: #0077cc;
+}
 
+.measure-form button[type="button"]:hover {
+  background: #005fa3;
+}
+
+/* ============================================
+   ✅ Dashboard Orders Cards
+============================================ */
 .orders {
-  max-width: 800px;
+  max-width: 900px;
   margin: 20px auto;
   padding: 10px;
 }
 
 .card {
   background: white;
-  padding: 18px;
-  margin: 15px 0;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 18px 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
   margin: 0;
   color: #4b1d3f;
+  font-size: 20px;
 }
 
 .card p {
   margin: 6px 0;
+  font-size: 15px;
 }
 
 .card small {
   color: gray;
+  font-size: 13px;
 }
 
-/* ================================
-   ✅ Footer
-================================ */
+/* ============================================
+   ✅ Status Buttons (Processing / Finished / Delivered)
+============================================ */
+.status-buttons {
+  margin-top: 15px;
+  text-align: center;
+}
 
+.status-buttons button {
+  padding: 10px 15px;
+  margin: 6px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: blue;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Active Status Turns Green */
+.status-buttons button.active {
+  background: green;
+}
+
+.status-buttons button:hover {
+  opacity: 0.85;
+}
+
+/* ============================================
+   ✅ Footer Section
+============================================ */
 footer {
   text-align: center;
   padding: 15px;
@@ -193,10 +242,9 @@ footer {
   color: #333;
 }
 
-/* ================================
-   ✅ Mobile Responsive (2026)
-================================ */
-
+/* ============================================
+   ✅ Mobile Responsive (2026 Upgrade)
+============================================ */
 @media (max-width: 600px) {
 
   .top-header h1 {
@@ -215,7 +263,18 @@ footer {
   }
 
   .btn {
-    width: 80%;
+    width: 85%;
     margin: 10px auto;
+  }
+
+  .measure-form {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .status-buttons button {
+    width: 90%;
+    margin: 6px auto;
+    display: block;
   }
 }
