@@ -1,14 +1,221 @@
-body{margin:0;font-family:Arial;background:#fafafa}
-.top-header{background:#4b1d3f;color:#fff;text-align:center;padding:20px}
-nav{text-align:center;background:#eee;padding:10px}
-nav a{margin:10px;text-decoration:none;color:#4b1d3f;font-weight:bold}
-.banner{height:200px;background:linear-gradient(#d98bc4,#4b1d3f);color:white;
-display:flex;align-items:center;justify-content:center;font-size:24px}
-.contact-buttons{text-align:center;margin:20px}
-.btn{padding:12px 20px;border-radius:10px;color:white;text-decoration:none;margin:10px;display:inline-block}
-.whatsapp{background:green}
-.call{background:blue}
-.measure-form{max-width:400px;margin:30px auto;background:white;padding:20px;border-radius:12px}
-.measure-form label{display:block;margin-top:10px}
-.measure-form input{width:100%;padding:8px}
-.measure-form button{margin-top:15px;width:100%;padding:10px;background:#4b1d3f;color:white;border:none}
+/* ================================
+   SSP Fashion Designer - 2026 Final CSS
+   Mugappair & Ayapakkam Boutique
+================================ */
+
+/* ✅ Global Page Style */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+/* ✅ Header */
+.top-header {
+  background: #4b1d3f;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.top-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.top-header p {
+  margin-top: 8px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* ✅ Navigation Bar */
+nav {
+  text-align: center;
+  background: #eee;
+  padding: 12px;
+}
+
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: #4b1d3f;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: #d98bc4;
+}
+
+/* ✅ Banner Section */
+.banner {
+  height: 220px;
+  background: linear-gradient(#d98bc4, #4b1d3f);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ✅ WhatsApp + Call Buttons */
+.contact-buttons {
+  text-align: center;
+  margin: 30px;
+}
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  margin: 12px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  background: green;
+}
+
+/* Call Button */
+.call {
+  background: blue;
+}
+
+/* ================================
+   ✅ Measurement Form Design
+================================ */
+
+.measure-form {
+  max-width: 450px;
+  margin: 35px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.measure-form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.measure-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.measure-form input:focus {
+  outline: none;
+  border-color: #4b1d3f;
+}
+
+/* Submit Button */
+.measure-form button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  background: #4b1d3f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.measure-form button:hover {
+  background: #d98bc4;
+}
+
+/* ================================
+   ✅ Dashboard Orders Cards
+================================ */
+
+.orders {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0;
+  color: #4b1d3f;
+}
+
+.card p {
+  margin: 6px 0;
+}
+
+.card small {
+  color: gray;
+}
+
+/* ================================
+   ✅ Footer
+================================ */
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #eee;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ================================
+   ✅ Mobile Responsive (2026)
+================================ */
+
+@media (max-width: 600px) {
+
+  .top-header h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .banner {
+    font-size: 22px;
+    height: auto;
+    padding: 40px 10px;
+  }
+
+  .btn {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
